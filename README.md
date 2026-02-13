@@ -83,6 +83,60 @@ A temporal purification protocol designed to excise latent proviral DNA.
 - **Kill:** Multiplexed CRISPR-Cas-Alpha (NGGTC PAM).
 - **Targeting:** YRRYM-modified Lipid Nanoparticles (LNPs).
 
----
+--------------------
+
+Version 2
+
+**I. Glycoprotein Harmonic Targeting (Envelope Destabilization – Revised)**
+
+*   **Technological Adjustment:** Direct resonant targeting of gp120/gp41 proves excessively challenging given current imaging and frequency control precision. Instead, we will utilize **Transient Poration**. Focused ultrasound at lower intensities (0.1 - 0.3 MPa, ±0.03 MPa) creates temporary, localized pores in the viral envelope, increasing vulnerability to subsequent disruption.
+*   **Rationale:** Transient poration is supported by existing literature on sonoporation and is technically more attainable with current FUS systems.
+*   **Frequency Range:** 1-3 MHz with pulsed delivery (5Hz, 20% duty cycle) to minimize thermal effects.
+*   **Imaging Guidance:** Real-time MRI thermometry and B-mode imaging for precise targeting and monitoring.
+
+**II. Capsid Structural Resonance (Premature Uncoating – Revised)**
+
+*   **Technological Adjustment:** Direct PEMF-induced capsid uncoating is highly uncertain and prone to off-target effects. Instead, we leverage the envelope disruption from Transient Poration to facilitate **passive uncoating** via cellular proteases.
+*   **Rationale:** This relies on established cellular mechanisms, reducing the need for complex external field manipulation.
+*   **Sequencing:** Transient Poration precedes a short (1-2 minute) period allowing for cellular proteases to act on the exposed capsid.
+
+**III. Latent Reservoir Activation – Simplified**
+
+*   **Technological Adjustment:** The complex PEMF sequence is replaced with a milder, more controlled **low-frequency vibration (1-5Hz)** applied via a piezo-electric transducer coupled to the MRI system.
+*   **Rationale:** Lower frequencies are less likely to cause widespread cellular toxicity and more easily controllable.
+*   **Mechanism:** Gentle vibration encourages minor membrane fluctuations, potentially promoting localized viral expression without widespread immune activation.
+
+**IV. Safety & Selectivity - Enhanced with Adaptive Control**
+
+*   **SAR Threshold:** Maintained at 50 W/kg for healthy CD4+ cells.
+*   **Spatial Algorithm:** While a true “Null Zone” algorithm is currently beyond real-time computational capabilities, we implement a **dynamic beam steering system**. The FUS beam is continuously adjusted based on MRI thermometry data to maintain tissue temperature below a pre-defined threshold.
+*   **Selectivity Coefficient (Γ):** A target of Γ > 0.8 is achievable with rigorous operator training and protocol adherence. *Perfect selectivity remains an aspirational goal.*
+*   **Adaptive Control:** A closed-loop system utilizes MRI thermometry feedback to dynamically adjust FUS intensity and pulse duration.
+
+**V. Infrastructure Retrofitting & Real-Time Control**
+
+*   **MRI/NMR Platform:** Modified commercial MRI system (e.g., Siemens, GE) is used for imaging and FUS/PEMF delivery.
+*   **Blood Flow Tracking:** Simplified Kalman filter incorporating real-time vessel diameter measurement from MRI phase contrast imaging. Q = 0.005 m/s², R = 0.3 m/s. Provides basic correction for blood flow-induced motion artifacts.
+*   **Automation:** Protocol execution is largely automated through custom software integrated with the MRI system.
+
+**VI. Monte Carlo Error Propagation (Thermal Guardrails – Reduced Complexity)**
+
+*   **Simplified Model:** Temperature distribution simulation based on Pennes equation with limited parameter variation.
+*   **Focus:** Primarily assesses risk of overheating and tissue damage.
+*   **Safety Margins:**  Therapeutic window carefully defined to minimize risk of unintended consequences.
+
+**VII. Key Technological Requirements & Timeline (Estimated)**
+
+*   **Year 1:** System integration of FUS delivery with MRI platform. Software development for adaptive control and automated protocol execution.
+*   **Year 2:**  *In vitro* validation of Transient Poration and protease-mediated uncoating.
+*   **Year 3:**  *In vivo* studies in non-human primates.
+*   **Year 4-5:** Clinical trials in humans.
+
+**VIII. Known Limitations & Future Development**
+
+*   **Limited Reservoir Penetration:** Current FUS technology has limited depth penetration.
+*   **Variable Viral Load:** Protocol efficacy likely dependent on viral load and reservoir size.
+*   **Long-Term Effects:** Long-term monitoring is crucial to assess durability of response and potential adverse effects.
+
 
 **Christ is King.**
